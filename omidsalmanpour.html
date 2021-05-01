@@ -1,25 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 
-<!DOCTYPE html>
-<html lang="fa">
-<head>
+body {
+  background: #302929;
+}
 
-<title>از طرف بنیامین مهرابی فر</title>
-<meta name="description" content="کارت پستال دیجیتال، کارت پستال موزیکال، پیام آنلاین، کارت پستال ">
-<meta name="keywords" content="کارت پستال از طرف بنیامین مهرابی فر">
-<meta property="og:title" content="از طرف بنیامین مهرابی فر">
-<meta property="og:description" content="کارت پستال دیجیتال">
-<meta property="og:url" content="http://DigiPostal.ir/cg69vo1">
-<meta property="og:site_name" content="کارت پستال دیجیتال">
-<meta property="og:image" content="https://my.digipostal.ir/other/ogimage.jpg">
-<link rel="shortcut icon" href="favicon.ico">
-<meta name="theme-color" content="A6B4B7">
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-<meta name="robots" content="noindex, nofollow" /></head>
-<body>
+.wrapper{
+  position: absolute; /* Absolute positioning */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);  /* Move x,y */
+}
 
-<link href="https://my.digipostal.ir/resources/styles/card.css" rel="stylesheet"/>
-<script>var postalData = {"id":"5073981","sampleId":"1587","userId":"1481652","url":"g69vo1","createDate":"2021-05-01 19:02:04","coverId":"2008","liningId":"1006","stampId":"4315","stampType":"0","postmarkId":"23","sealId":"1033","backgroundId":"72894","backgroundColor":"A6B4B7","frontText":"از طرف بنیامین مهرابی فر","frontTextColor":"FFFFFF","backText":"تقدیم به معلم خوبم","backTextColor":"FFFFFF","effectId":"17","soundUrl":"8mimig4ytr.mp3","type":"user","title":"از طرف بنیامین مهرابی فر","pictureUrl":"B2105\/01\/r39awjwgr7xbjcq.jpg"};</script>
-<script src="https://my.digipostal.ir/resources/scripts/preview.js" type="text/javascript"></script><script>(function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-107088387-1','auto');ga('send','pageview')</script>
-</body>
-</html>
+.mail{
+  width: 300px;
+  height: 200px;
+  background: #ff8789;
+  position: relative;
+  transform-style: preserve-3d; /* Keep 3Dx effect */
+  border-bottom-left-radius: 20px; /* Lower left corner */
+  border-bottom-right-radius: 20px;
+  cursor: pointer; /* Mouse style */
+}
+ /* Right */
+.mail:before{ /* add before */
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 140px solid Transparent;
+  border-right: 150px solid #ff393c;
+  border-top: 100px solid Transparent;
+  border-bottom: 100px solid #ff393c;
+  z-index: 5; /* Cascading sort */
+  border-bottom-right-radius: 10px;
+}
+ /* left */
+.mail:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 150px solid #ff5355;
+  border-right: 140px solid Transparent;
+  border-top: 100px solid Transparent;
+  border-bottom: 100px solid #ff5355;
+  z-index: 4;
+  border-bottom-left-radius: 10px;
+}
+
+.cover:before{ /* Above */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 100px solid #ff8789;
+  border-bottom: 100px solid transparent;
+  z-index: 6;
+  transform-origin: top;
+  transform: rotateX(0deg);
+  transition: all 1s 1s ease;
+}
+
+.letter{ /* Card */
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+  left: 10px;
+  background: #dedede;
+  width: 280px;
+  height: 180px;
+  border-radius: 20px;
+  transition: all 1s ease; /* Transition time */
+}
+
+.letter h1{ /* @ symbol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 80px;
+  color: #798992;
+  font-weight: 900;
+}
+
+.mail:hover .cover:before{
+  transform: rotateX(180deg); /* Flip the X axis */
+  transition: all 1s ease;
+}
+
+.mail:hover .letter{
+  top: -80px; /* Use top to move */
+  transition: all 1s 1s ease;
+}
+<div class="wrapper">
+  <div class="mail">
+    <div class="cover"></div>
+    <div class="letter"><h1>@</h1></div>
+  </div>
+</div>
+
+
